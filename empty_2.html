@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" id="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lorem Ipsum Institute of Technolgoy</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/empty.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column bg-light">
+  <!--start of header section-->
+  <header class="container-fluid d-none d-lg-block my-4 header" aria-label="Header of the website. Contains the logo image, name of the website and buttons for increasing and decreasing the font size.">
+      <div class="container" role = "group">
+        <div class="row no-gutters" role="group" >
+          <!--start of the banner section-->
+          <div class="col-8 media" role="banner" aria-label="A section with a logo and a heading.">
+            <img role="img" alt="An image of a logo. White text Lorem ipsum on the black background."  class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
+            <div role = "group" class="media-body align-self-center">
+              <h1 aria-level="1" role = "heading" aria-level="1" class="mb-0 title">
+                Lorem Ipsum
+                <br>Institute of Technology
+              </h1>
+            </div>
+          </div>
+          <!--end of the banner section-->
+          <!--start of the buttons section-->
+          <div role="group" class="col-4">
+            <div role="group" class="btn-toolbar justify-content-end" >
+              <div aria-label="A section with buttons to increase or decrease the font size" role = "group" class="btn-group btn-group-sm" >
+                <button onlick = "increase(this)" role = "button" aria-label="Button to increase the font size" class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
+                <button onlick = "decrease(this)" role = "button" aria-label="Button to decrease the font size" class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+              </div>
+            </div>
+          </div>
+          <!--end of the buttons section-->
+        </div>
+      </div>
+  </header>
+  <!--end of header section-->
+  
+  <!-- Omnia's part-->
+  <div w3-include-html="nav_menu.html"></div>
+
+
+    <main aria-label="the main section of the empty page" role="main" class="container mt-4 text-center main" id="main">
+        <h1 aria-level="1" class="text-primary py-4 mb-4 title" id="title-placeholder">Loading...</h1>
+        <p class="text-secondary" id="text-placeholder"></p>
+    </main>
+
+
+    <footer role ="contentinfo" aria-label="The footer of the website">
+      <div class="container-fluid bg-dark mt-4 footer" role="group">
+        <div class="container text-center py-3" role="group">
+          <div class="row justify-content-around" role="group">
+            <a role = "link" class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
+            <a role = "link" class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a>
+            <a role = "link" class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a>
+            <a role = "link" class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of service</a>
+            <a role = "link" class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/popper.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/empty.js"></script>
+
+    <!--Omnia's part -->
+    <script>includeHTML();</script>
+
+</body>
+
+</html>
