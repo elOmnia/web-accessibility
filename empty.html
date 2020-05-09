@@ -41,7 +41,9 @@
       </div>
   </header>
   <!--end of header section-->
+
   <!-- Omnia's part-->
+  <!--<div w3-include-html="nav_menu.html"></div>-->
   <nav role="navigation" aria-label="Main navigation">
     <div role="group" class="container-fluid bg-dark nav" >
       <div role="group" class="container">
@@ -82,39 +84,39 @@
                 </ul>
               </li>
 
+
               <li class="nav-item dropdown">
-                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                <div class="dropdown-menu">
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                  </div>
-                </div>
+                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-edu-research">Education &amp; research</a>
+                <ul tabindex="-1" aria-activedescendant="nav-bar-edu-research" role="listbox" class="dropdown-menu" aria-labelledby="nav-bar-edu-research">
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
+                  </li>
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Master">Master</a>
+                  </li>
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
+                  </li>
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
+                  </li>
+                </ul>
               </li>
 
               <li class="nav-item dropdown">
-                <a onclick="expand_collapse(this)" aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                <div class="dropdown-menu">
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                  </div>
-                </div>
-              </div>
-            </li>
+                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-industry-partners">Industry &amp; partners</a>
+                <ul tabindex="-1" aria-activedescendant="nav-bar-industry-partners" role="listbox" class="dropdown-menu" aria-labelledby="nav-bar-industry-partners">
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
+                  </li>
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
+                  </li>
+                  <li role="menuitem">
+                    <a role="link" class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
+                  </li>
+                </ul>
+              </li>
 
             <li class="navbar-nav">
               <div class="nav-item">
@@ -162,6 +164,10 @@
     <script type="text/javascript" src="./js/bootstrap.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/empty.js"></script>
+
+    <!--Omnia's part -->
+    <!--<script>includeHTML();</script>-->
+
 </body>
 
 </html>
