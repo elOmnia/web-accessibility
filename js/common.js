@@ -37,7 +37,9 @@ function toggleNavigation(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+$(document).on('click', '#nav-bar-content .dropdown-toggle', openMenu)
+$(document).on('click', '.navbar-toggler', toggleNavigation)
+/*document.addEventListener('DOMContentLoaded', function() {
     var dropDownToggles =
         document.querySelectorAll('#nav-bar-content .dropdown-toggle');
 
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.navbar-toggler')
         .addEventListener('click', toggleNavigation, false);
-}, false);
+}, false);*/
 
 function increase(elem) {
   let txt = document.getElementsByTagName("html")[0];
