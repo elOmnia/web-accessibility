@@ -74,12 +74,20 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
     <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script>
+    <!--<script>
       $(function(){
             $("#shared-nav-menu").load("nav_menu.html");
         });
          // includeHTML();
-    </script> 
+    </script> -->
+    
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+    $.get("nav-menu.html", function(data){
+        $("#shared-nav-menu").replaceWith(data);
+    });
+    </script>
+
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/empty.js"></script>
     
