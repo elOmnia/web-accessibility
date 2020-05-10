@@ -41,93 +41,10 @@
       </div>
   </header>
   <!--end of header section-->
-  <!-- Omnia's part-->
-  <nav>
-    <div class="container-fluid bg-dark nav" >
-      <div class="container">
-        <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-          <div class="navbar-brand d-lg-none">
-            <a class="nav-link" href="./index.html"><img class="rounded-right" src="./img/logo.jpg" width="40" height="40"></a>
-          </div>
-          <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="nav-bar-content">
-            <div class="navbar-nav mr-auto">
-              <div class="nav-item">
-                <a class="nav-link active" href="./index.html">Homepage</a>
-              </div>
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                <div class="dropdown-menu">
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                  </div>
-                </div>
-              </div>
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                <div class="dropdown-menu">
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                  </div>
-                </div>
-              </div>
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                <div class="dropdown-menu">
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                  </div>
-                  <div>
-                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="navbar-nav">
-              <div class="nav-item">
-                <a class="nav-link" href="./login.html">Login</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-lg-none">
-          <div class="btn-toolbar justify-content-end">
-            <div class="btn-group btn-group-sm">
-              <button onclick="increase(this)" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Button for increasing font size">A+</button>
-              <button onclick="decrease(this)" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Button for decreasing font size">A-</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
+  
+  <!-- Omnia's part: Include shared menu-->
+  <div id="shared-nav-menu">
+  </div>
 
     <main role="main" aria-label="The main content of the article about the global temperature record" class="container mt-4 main" id="main">
         <div role="group" class="p-5 bg-white">
@@ -280,6 +197,13 @@
       </div>
     </footer>
 
+    <!--Omnia's part: Include shared menu -->
+    <script>
+    $.get("nav_menu.html", function(data){
+        $("#shared-nav-menu").replaceWith(data);
+    });
+    </script>
+    
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
     <script type="text/javascript" src="./js/bootstrap.js"></script>
