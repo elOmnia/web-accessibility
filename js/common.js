@@ -121,5 +121,3 @@ function includeHTML() {
     }
   }
 }
-
-includeHTML();
