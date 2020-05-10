@@ -42,103 +42,10 @@
   </header>
   <!--end of header section-->
 
-  <!-- Omnia's part-->
-  <!--<div w3-include-html="nav_menu.html"></div>-->
-  <nav role="navigation" aria-label="Main navigation">
-    <div role="group" class="container-fluid bg-dark nav" >
-      <div role="group" class="container">
-        <div role="group" class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-          <div role="menubar" class="navbar-brand d-lg-none">
-            <a role="link" class="nav-link" href="./index.html"><img role="img" alt="logo" class="rounded-right" src="./img/logo.jpg" width="40" height="40"></a>
-          </div>
-
-          <button role="menuitem" class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div role="group" class="collapse navbar-collapse" id="nav-bar-content">
-            <ul role="menu" class="navbar-nav mr-auto">
-
-              <li role="menuitem" class="nav-item">
-                <a role="link" class="nav-link" href="./index.html">Homepage</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                <ul tabindex="-1" aria-activedescendant="nav-bar-faculties" role="listbox" class="dropdown-menu" aria-labelledby="nav-bar-faculties">
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                  </li>
-                </ul>
-              </li>
-
-
-              <li class="nav-item dropdown">
-                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-edu-research">Education &amp; research</a>
-                <ul tabindex="-1" aria-activedescendant="nav-bar-edu-research" role="listbox" class="dropdown-menu" aria-labelledby="nav-bar-edu-research">
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a aria-haspopup="true" aria-expanded="false" role="button" class="nav-link dropdown-toggle" href="#" id="nav-bar-industry-partners">Industry &amp; partners</a>
-                <ul tabindex="-1" aria-activedescendant="nav-bar-industry-partners" role="listbox" class="dropdown-menu" aria-labelledby="nav-bar-industry-partners">
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                  </li>
-                  <li role="menuitem">
-                    <a role="link" class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                  </li>
-                </ul>
-              </li>
-
-            <li class="navbar-nav">
-              <div class="nav-item">
-                <a class="nav-link" href="./login.html">Login</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-lg-none">
-          <div class="btn-toolbar justify-content-end">
-            <div class="btn-group btn-group-sm">
-              <button role="button" onclick="increase(this)" class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Button for increasing font size">A+</button>
-              <button role="button" onclick="decrease(this)" class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Button for decreasing font size">A-</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
+  <!-- Omnia's part: Include shared menu-->
+  <div id="shared-nav-menu">
+  </div>
+    
     <main aria-label="the main section of the empty page" role="main" class="container mt-4 text-center main" id="main">
         <h1 aria-level="1" class="text-primary py-4 mb-4 title" id="title-placeholder">Loading...</h1>
         <p class="text-secondary" id="text-placeholder"></p>
@@ -162,11 +69,15 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
     <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <!--Omnia's part: Include shared menu -->
+    <script>
+    $.get("nav_menu.html", function(data){
+        $("#shared-nav-menu").replaceWith(data);
+    });
+    </script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/empty.js"></script>
 
-    <!--Omnia's part -->
-    <!--<script>includeHTML();</script>-->
 
 </body>
 
