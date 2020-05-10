@@ -95,9 +95,7 @@ document.querySelector('#nav-bar-faculties') // Select the menu element
 
 //Omnia
 
-$(function(){
-  $("#shared-nav-menu").load("../nav_menu.html");
-});
+
 
 
 function includeHTML() {
