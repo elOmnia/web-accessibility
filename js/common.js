@@ -19,6 +19,9 @@ function openMenu(event) {
     if (!isOpen) {
         currentDropDownMenu.classList.add('show');
     }
+
+    //console.log("in openMenu")
+    expand_collapse(currentDropDownButton)
 }
 
 /**
@@ -36,6 +39,7 @@ function toggleNavigation(event) {
         content.classList.add('collapse');
     }
 }
+
 
 $(document).on('click', '#nav-bar-content .dropdown-toggle', openMenu)
 $(document).on('click', '.navbar-toggler', toggleNavigation)
@@ -65,8 +69,9 @@ function decrease(elem) {
   txt.style.fontSize = (currentSize - 5) + 'px';
 }
 
-/*
+
 function expand_collapse(el) {
+  //console.log("in expand_collapse")
   event.preventDefault();
   var expanded = el.getAttribute('aria-expanded');
   var new_val;
@@ -78,4 +83,33 @@ function expand_collapse(el) {
   }
   el.setAttribute('aria-expanded', new_val);
 }
-*/
+
+//Handle spacebar keyboard interaction
+$(document).keypress(function(e) {
+    if (e.which == 32) { //Space detected
+
+      
+        var target = $(event.target);
+        //console.log(target)
+        
+        if(target.is( "a") ) {// if space clicked on a link
+
+            //console.log("Space clicked on menu item")
+
+            
+            
+            if(target.is(".dropdown-toggle")){//open menu if it is a dropdown menu
+               openMenu(event)
+            }
+            else { //otherwise open link
+                 //console.log("Not openable menu");
+                 //console.log(target.attr('href'));
+                 location.href = target.attr('href');
+            }
+
+        }
+    }
+});
+
+
+
